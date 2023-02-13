@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: copilot-react-test
+    image: copilot-react-test
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - '.:/app'
+      - '/app/node_moudles'
+    ports:
+      - 3000:3000
